@@ -20,15 +20,15 @@ review_xpath = '//*[@id="content"]/div[1]/div[4]/div[1]/div[4]'
 review_number_xpath =  '//*[@id="reviewTab"]/div/div/div[2]/span/em'
 review_button_xpath = '//*[@id="movieEndTabMenu"]/li[6]/a'                   #review button
 #                      //*[@id="movieEndTabMenu"]/li[6]/a
-your_year = 2020 # 할당받은 연도로 수정하세요.
+your_year = 2019 # 할당받은 연도로 수정하세요.
 
-for i in range(1, 3): #38
+for i in range(9, 44): #38
     url = 'https://movie.naver.com/movie/sdb/browsing/bmovie.naver?open={}&page={}'.format(your_year, i)
     titles = []
     reviews = []
     try:
         time.sleep(0.5)
-        for j in range(1, 3): #21
+        for j in range(1, 21): #21
             driver.get(url)
             movie_title_xpath = '//*[@id="old_content"]/ul/li[{}]/a'.format(j)
             try:
