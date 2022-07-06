@@ -19,7 +19,7 @@ stopwords = list(df_stopwords['stopword'])
 cleaned_sentences = []
 for review in df.reviews:
     review = re.sub('[^가-힣 ]', ' ', review)
-    token = okt.pos(review, stem=True)
+    token = okt.pos(review, stem=True) # 튜플로 묶어줌
 
     df_token = pd.DataFrame(token, columns=['word', 'class'])
     df_token = df_token[(df_token['class'] == 'Noun') |

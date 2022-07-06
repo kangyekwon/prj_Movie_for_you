@@ -26,7 +26,7 @@ print(sim_word)
 vectors = []
 labels = []
 
-##차원축소
+##차원축소 / #심워드는 라벨과 값니아모 라벨만 받을꺼라 뒤에는 언더바로 처리
 for label, _ in sim_word: #처음 형태 예를들어 살아가다의 형태소가 백터값에 들어가고 , 100차원 좌표 10개들어감
     labels.append(label)
     vectors.append(embedding_model.wv[label])
